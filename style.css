@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    position: relative;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.4);
+}
+.container .left_side{
+    position: relative;
+    background-color: #003147;
+    padding: 40px;
+    flex: 1;
+}
+.container .right_side {
+    position: relative;
+    background-color: #fff;
+    padding: 35px;
+    flex: 2;
+}
+.left_side .profileBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+.left_side .profileBox h2{
+    margin-top: 10px;
+    font-weight: 600px;
+    color: white;
+}
+.left_side .profileBox h2 span{
+    font-size: 0.8em;
+    font-weight: 100;
+}
+.left_side .profileBox img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* contact info */
+.left_side .conatct_info{
+    margin-top: 20px;
+}
+.conatct_info .title{
+    color: #f3f3f3;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.left_side .conatct_info ul li{
+    list-style: none;
+    color: white;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.conatct_info ul li .icon{
+    width: 30px;
+    font-size: 18px;
+    display: inline-block;
+    color: aqua;
+}
+.conatct_info ul li .text{
+    letter-spacing: 1px;
+}
+
+/* education */
+.conatct_info.education ul li{
+    margin-top: 15px;
+}
+.conatct_info.education ul li h5{
+    color: aqua;
+}
+.conatct_info.education ul li h4{
+    font-weight: 500;
+}
+.conatct_info.education ul li h4:nth-child(3){
+    font-weight: 300;
+}
+.conatct_info.languages .percent {
+    display: block;
+    position: relative;
+    background: #000;
+    margin-top: 5px;
+    width: 100%;
+    height: 5px;
+}
+.conatct_info.languages .percent div{
+    background: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.right_side .profile, .experience, .skills{
+    margin-bottom: 40px;
+}
+.title2{
+    text-transform: uppercase;
+    color: #020027;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.right_side .profile .text{
+    color: #505050;
+    line-height: 18px;
+    text-align: justify;
+    font-weight: 400;
+}
+.experience .box{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.experience .box .year{
+    flex: 1;
+    text-transform: uppercase;
+    color: #777777;
+    font-weight: 100;
+}
+.experience .box .text{
+    flex: 2.5;
+    color: #505050;
+    line-height: 18px;
+    text-align: justify;
+    font-weight: 400;
+}
+.experience .box .text h4{
+    color: #008697;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+.skills .box{
+    display: flex;
+    margin: 20px 0;
+}
+.skills .box h4{
+    flex: 1;
+    color: #777777;
+    text-transform: uppercase;
+
+}
+.skills .box .percent{
+    display: block;
+    flex: 2.5;
+    position: relative;
+    background: #c0c0c0;
+    margin-top: 5px;
+    width: 100%;
+    height: 10px;
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #008697;
+}
+.interest .interestContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    color: #2c2c2c;
+}
+.interest .interestContainer span{
+    font-weight: 600;
+}
+.interest .interestContainer .fa{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    color: #008697;
+}
+
+@media (max-width: 1000px){
+    .container{
+        flex-direction: column;
+        margin: 0;
+    }
+    .conatct_info.education ul li h5 {
+        color: aqua;
+        margin-bottom: 5px;
+    }
+    .left_side .conatct_info ul li{
+        margin-bottom: 10px;
+    }
+    .experience .box .text h4 {
+        color: #008697;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    .experience .box{
+        flex-direction: column;
+    }
+    .skills .box{
+        flex-direction: column;
+    }
+    .skills .box .percent{
+        flex: auto;
+    }
+    .interestContainer div{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    
+}
